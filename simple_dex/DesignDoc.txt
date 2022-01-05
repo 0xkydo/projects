@@ -1,0 +1,25 @@
+// =================== CS251 DEX Project =================== // 
+//                      Design Document                      //
+//                          Names                            //
+// ========================================================= //  
+
+1. Explain why adding and removing liquidity to your exchange does not change the exchange rate.
+
+Adding and removing liquidity does not change exchange rate because we add and/or remove liquidity in proportion to the current exchange rate, which is x/y or y/x.
+
+
+2. Explain your scheme for rewarding liquidity providers and justify the design decisions you made. How does it satisfy requirements (2)-(4) from Section 5?
+
+Our approach works the same way as Uniswap protocol. We keep k the same after each swap and will reinvest the swap fee at the end of the trade by leaving the swap fee inside the pool. Therefore, we change the exchange rate a bit and also the value of k but incentivize the LPs by a higher total pool value with swap fee reinvested.
+
+
+3. Describe at least one method you used to minimize your exchange contract’s gas usage. Why was this method effective?
+
+We do most computation off-chain in the JS file. For example, we calculated the max slippage rate off-chain and pass on the value to the function on blockchain. This method is very effective.
+
+
+4. Optional Feedback
+(a) How much time did you spend on the assignment? 10 hours.
+(b) What is one thing that would have been useful to know before starting the assignment? you cannot pass in decimals into function calls.
+(c) If you could change one with about this assignment, what would you change? the last part is weird... it does not work the same way as most AMMs nowadays.
+(d) Please feel free to include any other feedback you may have.
