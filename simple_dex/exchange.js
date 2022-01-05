@@ -1,7 +1,3 @@
-// =================== CS251 DEX Project =================== // 
-//        @authors: Simon Tao '22, Mathew Hogan '22          //
-// ========================================================= //                  
-
 // sets up web3.js
 const web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");
 

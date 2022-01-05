@@ -1,8 +1,3 @@
-
-
-// =================== CS251 DEX Project =================== // 
-//        @authors: Simon Tao '22, Mathew Hogan '22          //
-// ========================================================= //    
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.0;
 
